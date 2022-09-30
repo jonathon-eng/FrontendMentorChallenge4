@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+  </style>
+</head>
+<body>
+
+
+<div class="description">
+  <p class="hero">
+  Learn to code by watching others
+  </p>
+
+  <p class="heroT">
+  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable. 
+  </p>
+
+</div>
+
+
+<div class="actionArea">
+  
+<button class="trialButton" href="#">
+  <b>Try it free 7 days</b> then $20/mo. thereafter
+</button>
+
+<form>
+
+
+  <input type="text" placeholder="First Name" id=Fname name=Fname required minlength="1"/>
+  <div id="cname" class="emsg"></div>
+  
+  <input type="text" placeholder="Last Name" id=Lname name=Lname required minlength="1"/>
+  <div id="clname" class="emsg"></div>
+  
+  
+  <input type="email" placeholder="Email Address" id=Email name=Email minlength="1" pattern="*@*.com" required/>
+  <div id="email" class="emsg"></div>
+
+  <input type="password" placeholder="Password" id="Pass" name="Pass" required minlength="1"/>
+  <div id="password" class="emsg"></div>
+
+  <input type="submit" value="CLAIM YOUR FREE TRIAL">
+  
+  <p class="TOS">By clicking the button, you are agreeing to our <span><a href="#"> Terms and Services </a></span></p>
+  
+
+
+</form>
+  
+</div>
+
+
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
