@@ -1,13 +1,11 @@
-let form = document.querySelector("form");
-
-document.addEventListener('invalid', (function(){
+const form = document.querySelector("form");
+form.addEventListener('submit', (function(){
     return function(e) {
-
       e.preventDefault();
-
       check();
     };
 })(), true);
+
 
 function check () {
      // (C2) NAME
