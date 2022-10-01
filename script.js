@@ -1,65 +1,168 @@
+// const form = document.querySelector("form");
+// // const submit = document.querySelector("submit")
+
+// form.addEventListener('invalid', e => {
+   
+//       e.preventDefault();
+
+//       check();
+    
+// });
+
+// function check () {
+//     // (C1) INIT
+//     let valid = true, error = "", field = "";
+
+//      // (C2) NAME
+//     field = document.getElementById("Fname");
+//     error = document.getElementById("cname");
+//     if (!field.checkValidity()) {
+//       valid = false;
+//       field.classList.add("err");
+//       error.innerHTML = "First Name cannot be empty\r\n";
+//       return;
+//     } else {
+//       field.classList.remove("err");
+//       error.innerHTML = "";
+//     }
+
+//     // // (C3) LAST NAME
+//     // field = document.getElementById("Lname");
+//     // error = document.getElementById("clname");
+//     // if (!field.checkValidity()) {
+//     //     valid = false;
+//     //     field.classList.add("err");
+//     //     error.innerHTML = "Last Name cannot be empty\r\n";
+//     // } else {
+//     //     field.classList.remove("err");
+//     //     error.innerHTML = "";
+//     // }
+    
+//     // // (C4) EMAIL
+//     // field = document.getElementById("Email");
+//     // error = document.getElementById("email");
+//     // if (!field.checkValidity()) {
+//     //     valid = false;
+//     //     field.classList.add("err");
+//     //     error.innerHTML = "Looks like this is not an email\r\n";
+//     // } else {
+//     //     field.classList.remove("err");
+//     //     error.innerHTML = "";
+//     // }
+    
+//     // // (C5) PASSWORD
+//     // field = document.getElementById("Pass");
+//     // error = document.getElementById("password");
+//     // if (!field.checkValidity()) {
+//     //   valid = false;
+//     //   field.classList.add("err");
+//     //   error.innerHTML = "Password cannot be empty\r\n";
+//     // } else {
+//     //   field.classList.remove("err");
+//     //   error.innerHTML = "";
+//     // }
+  
+//     event.preventDefault()
+    
+//     return valid;
+    
+//     // (C4) RESULT
+//   }
+
+function errors(){
+
+    let valid = true, error = "", field = "";
+
+    // name
+    field = document.getElementById("Fname");
+    error = document.getElementById("cname");
+    if (!field.checkValidity()) {
+      valid = false;
+      field.style.outline = "2px solid hsl(0, 100%, 74%)";
+      field.classList.add("err");
+      field.style.color = "hsl(0, 100%, 74%)";
+      error.innerHTML = "First Name cannot be empty\r\n";
+    } else {
+      field.classList.remove("err");
+      field.style.outline = "1px hsl(246, 25%, 77%) solid";
+      field.style.color = "hsl(249, 10%, 26%)";
+      error.innerHTML = "";
+    }
+
+    field = document.getElementById("Lname");
+    error = document.getElementById("clname");
+    if (!field.checkValidity()) {
+      valid = false;
+      field.style.outline = "2px solid hsl(0, 100%, 74%)";
+      field.style.color = "hsl(0, 100%, 74%)";
+      field.classList.add("err");
+      error.innerHTML = "Last Name cannot be empty\r\n";
+    } else {
+      field.classList.remove("err");
+      field.style.outline = "1px hsl(246, 25%, 77%) solid";
+      field.style.color = "hsl(249, 10%, 26%)";
+      error.innerHTML = "";
+    }
+
+    field = document.getElementById("Email");
+    error = document.getElementById("email");
+    
+    if (field.value.trim().length === 0) {
+        valid = false;
+        field.style.outline = "2px solid hsl(0, 100%, 74%)";
+        field.style.color = "hsl(0, 100%, 74%)";
+        field.classList.add("err");
+        error.innerHTML = "Email cannot be empty\r\n";
+      }
+    
+    else if (!field.checkValidity()) {
+      valid = false;
+      field.style.outline = "2px solid hsl(0, 100%, 74%)";
+      field.style.color = "hsl(0, 100%, 74%)";
+      field.classList.add("err");
+      error.innerHTML = "Looks like this is not an email\r\n";
+    } 
+    
+    else {
+      field.classList.remove("err");
+      field.style.outline = "1px hsl(246, 25%, 77%) solid";
+      field.style.color = "hsl(249, 10%, 26%)";
+      error.innerHTML = "";
+    }
+
+    field = document.getElementById("Pass");
+    error = document.getElementById("password");
+    if (!field.checkValidity()) {
+      valid = false;
+      field.style.outline = "2px solid hsl(0, 100%, 74%)";
+      field.style.color = "hsl(0, 100%, 74%)";
+      field.classList.add("err");
+      error.innerHTML = "Password cannot be empty\r\n";
+    } else {
+      field.classList.remove("err");
+      field.style.outline = "1px hsl(246, 25%, 77%) solid";
+      field.style.color = "hsl(249, 10%, 26%)";
+      error.innerHTML = "";
+    }
+
+    
+}
+
 const form = document.querySelector("form");
-form.addEventListener('submit', (function(){
-    return function(e) {
-      e.preventDefault();
-      check();
-    };
-})(), true);
 
 
-function check () {
-     // (C2) NAME
-    let field1 = document.getElementById("Fname");
-    let error1 = document.getElementById("cname");
-    if (!field1.checkValidity()) {
-      valid = false;
-      field1.classList.add("err");
-      error1.innerHTML = "First Name cannot be empty\r\n";
-    } else {
-      field1.classList.remove("err");
-      error1.innerHTML = "";
-    }
+//     if (!field.checkValidity()) {
+//       valid = false;
+//       field.classList.add("err");
+//       error.innerHTML = "First Name cannot be empty\r\n";
+//       return;
+//     } else {
+//       field.classList.remove("err");
+//       error.innerHTML = "";
+//     }
 
-    // (C3) LAST NAME
-    let field2 = document.getElementById("Lname");
-    let error2 = document.getElementById("clname");
-    if (!field2.checkValidity()) {
-        valid = false;
-        field2.classList.add("err");
-        error2.innerHTML = "Last Name cannot be empty\r\n";
-    } else {
-        field2.classList.remove("err");
-        error2.innerHTML = "";
-    }
-    
-    // (C4) EMAIL
-    let field3 = document.getElementById("Email");
-    let error3 = document.getElementById("email");
-    if (!field3.checkValidity()) {
-        valid = false;
-        field3.classList.add("err");
-        error3.innerHTML = "Looks like this is not an email\r\n";
-    } else {
-        field3.classList.remove("err");
-        error3.innerHTML = "";
-    }
-    
-    // (C5) PASSWORD
-    let field4 = document.getElementById("Pass");
-    let error4 = document.getElementById("password");
-    if (!field4.checkValidity()) {
-      valid = false;
-      field4.classList.add("err");
-      error4.innerHTML = "Password cannot be empty\r\n";
-    } else {
-      field4.classList.remove("err");
-      error4.innerHTML = "";
-    }
-  
 
-  
-event.preventDefault()
-    // (C4) RESULT
-    return valid;
-  }
-
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    errors();
+});

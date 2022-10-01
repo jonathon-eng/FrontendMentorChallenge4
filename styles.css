@@ -14,6 +14,7 @@
 body {
     /* Allows for the image to be present and have a color overlay */
     background: url(./images/bg-intro-mobile.png) repeat hsl(0, 100%, 74%);  
+    
 }
 
 /* First column for desktop view*/
@@ -24,7 +25,6 @@ body {
 }
 
 .description > .hero {
-    padding: 1rem 0;
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -41,8 +41,9 @@ body {
     flex-direction: column;
 }
 
-.actionArea > .trialButton{
+.actionArea > .trialButton button{
     padding: 2rem;
+    width: 100%;
     margin-bottom: 1rem;
     background-color: hsl(248, 32%, 49%);
     border-radius: 15px;
@@ -68,6 +69,11 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
+ 
+
+.actionArea > form > label {
+    display: none;
+}
 
 .actionArea > form > input {
     width: 100%;
@@ -87,7 +93,10 @@ body {
     text-align: left;
     padding-block: 1.5rem;
     outline: 1px hsl(246, 25%, 77%) solid;
-    
+}
+
+.actionArea > form > input:not([type="submit"]):focus {
+    outline: 2px hsl(246, 25%, 77%) solid;
 }
 
 .actionArea > form > input::placeholder {
@@ -115,23 +124,27 @@ body {
 
 /* validation */
 /* the pseudo selector is important!! */
-.actionArea > form > input:not(:focus):not(:placeholder-shown):invalid {
+/* .actionArea > form > input:not(:focus):not(:placeholder-shown):invalid {
     outline: 2px solid hsl(0, 100%, 74%);
-}
-
-
+} */
 
 .err {
     background: #ffe6ee;
-    border: 2px solid hsl(0, 100%, 74%);
     background-image: url(./images/icon-error.svg);
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat; 
+    background-position: right center;
+    color: hsl(0, 100%, 74%);
+}
+    
 .emsg { 
     color: hsl(0, 100%, 74%); 
     font-weight: 400; 
 font-size: .9rem;
 text-align: right;
-font-style: italic;}
+font-style: italic;
+padding-bottom: 1rem;
+
+}
 /* background-image: url(./images/icon-error.svg);
     background-repeat: no-repeat; */
 
@@ -192,6 +205,14 @@ font-style: italic;}
     margin-top: 10%;
 }
 
+footer {
+    position: absolute;
+    top: 0;
+}
+
+.attribution a  {
+    font-size: 1.3rem;
+}
 
 }
 
@@ -207,5 +228,6 @@ font-style: italic;}
     margin-block: 3rem;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(0, 0%, 100%);
+    
 }

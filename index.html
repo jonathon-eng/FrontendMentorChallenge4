@@ -19,58 +19,65 @@
 
 
 <div class="description">
-  <p class="hero">
+  <h1 class="hero">
   Learn to code by watching others
-  </p>
+  </h1>
 
-  <p class="heroT">
+  <h2 class="heroT">
   See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
   but understanding how developers think is invaluable. 
-  </p>
+  </h2>
 
 </div>
 
 
 <div class="actionArea">
   
-<button class="trialButton" href="#">
+<a class="trialButton" href= "https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="trialButton">
   <b>Try it free 7 days</b> then $20/mo. thereafter
-</button>
+</button></a>
 
-<form>
+<form novalidate>
 
-
-  <input type="text" placeholder="First Name" id=Fname name=Fname required minlength="1"/>
+  <label for="cname">First Name</label>
+  <input type="text" placeholder="First Name" id=Fname name=Fname minlength="1"  required />
   <div id="cname" class="emsg"></div>
   
+  <label for="clname">Last Name</label>
   <input type="text" placeholder="Last Name" id=Lname name=Lname required minlength="1"/>
   <div id="clname" class="emsg"></div>
   
   
-  <input type="email" placeholder="Email Address" id=Email name=Email minlength="1" pattern="*@*.com" required/>
+  <label for="email">Email</label>
+  <input type="email" placeholder="Email Address" id=Email name=Email minlength="1" required/>
   <div id="email" class="emsg"></div>
-
+  
+  <label for="password">Password</label>
   <input type="password" placeholder="Password" id="Pass" name="Pass" required minlength="1"/>
   <div id="password" class="emsg"></div>
 
-  <input type="submit" value="CLAIM YOUR FREE TRIAL">
+  <label for="submit">Submit</label>
+  <input id="submit" type="submit" value="CLAIM YOUR FREE TRIAL"/>
   
+  
+
   <p class="TOS">By clicking the button, you are agreeing to our <span><a href="#"> Terms and Services </a></span></p>
   
-
-
 </form>
+
+
+
   
 </div>
 
 
 
-  <!-- <footer>
+  <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Jonathon Eng</a>.
     </p>
-  </footer> -->
+  </footer>
 
   <script src="script.js"></script>
 </body>
